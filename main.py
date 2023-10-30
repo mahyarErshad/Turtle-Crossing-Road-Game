@@ -25,4 +25,8 @@ while game_is_on:
         if cars.distance(player) < 23:
             game_is_on = False
 
+    if player.is_at_finish_line():
+        player.go_to_start()
+        car.increase_speed()
+
 screen.exitonclick()
